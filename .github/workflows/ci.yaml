@@ -33,7 +33,7 @@ jobs:
       -   name: Install dependencies
           run: |
             composer install --ansi --no-progress
-            cp -r vendor vendor/orchestra/testbench-core/laravel
+            ln -s vendor vendor/orchestra/testbench-core/laravel/vendor
 
       -   name: Run tests
           run: vendor/bin/phpunit
