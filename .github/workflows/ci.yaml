@@ -31,9 +31,7 @@ jobs:
           run: docker compose up -d
 
       -   name: Install dependencies
-          run: |
-            composer install --ansi --no-progress
-            ln -s vendor vendor/orchestra/testbench-core/laravel/vendor
+          run: composer install
 
       -   name: Run tests
           run: vendor/bin/phpunit
