@@ -25,7 +25,7 @@ jobs:
           run: docker compose up -d --wait
 
       -   name: Run static analysis
-          run: docker run --network laravel-playwright app vendor/bin/phpunit
+          run: docker compose exec app vendor/bin/phpunit
 
   static_analysis:
     name: Static analysis
