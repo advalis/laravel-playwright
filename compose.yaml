@@ -12,8 +12,6 @@ services:
     volumes:
       - ./src:/app/src
       - ./tests:/app/tests
-    networks:
-      - laravel-playwright
 
   db:
     image: postgres
@@ -22,12 +20,5 @@ services:
       POSTGRES_DB: postgres
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-    networks:
-        laravel-playwright:
-          aliases:
-            - db
-
-networks:
-    laravel-playwright:
-        name: laravel-playwright
-        driver: bridge
+    ports:
+      - 9876:5432
