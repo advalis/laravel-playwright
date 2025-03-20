@@ -10,7 +10,8 @@ services:
     tty: true
     working_dir: /app
     volumes:
-      - .:/app
+      - ./src:/app/src
+      - ./tests:/app/tests
     networks:
       - laravel-playwright
 
