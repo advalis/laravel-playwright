@@ -31,7 +31,6 @@ class Controller
         exec($finalCommand, $output, $exitCode);
 
         $output = implode("\n", $output);
-        dd($output);
 
         return Response::json([
             'code' => $exitCode,

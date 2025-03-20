@@ -9,6 +9,5 @@ COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 COPY . /app
 WORKDIR /app
 
-RUN composer install
-
-
+RUN composer install \
+    && ln -s /app/vendor /app/vendor/orchestra/testbench-core/laravel/vendor # needed for ArtisanTest

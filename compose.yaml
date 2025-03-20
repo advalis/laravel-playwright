@@ -9,7 +9,6 @@ services:
     working_dir: /app
     volumes:
       - .:/app
-      - /app/vendor
     networks:
       - laravel-playwright
 
