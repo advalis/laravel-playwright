@@ -31,7 +31,9 @@ jobs:
           run: docker compose up -d
 
       -   name: Install dependencies
-          run: composer update --ansi --no-progress
+          run: |
+            composer install --ansi --no-progress
+            cp -r vendor vendor/orchestra/testbench-core/laravel
 
       -   name: Run tests
           run: vendor/bin/phpunit
@@ -52,7 +54,7 @@ jobs:
             ini-file: development
 
       -   name: Install dependencies
-          run: composer update --ansi --no-progress
+          run: composer install --ansi --no-progress
 
       -   name: Run phpstan
           run: vendor/bin/phpstan analyse --ansi --no-progress
