@@ -39,7 +39,7 @@ class ArtisanTest extends TestCase
         /** @var array<mixed, array<mixed>> $output */
         $output = json_decode((string) $json['output'], true);
         $this->assertSame('Laravel Framework', $output['application']['name']);
-        $this->assertStringContainsString('artisan list --format=json', (string) $json['command']);
+        $this->assertStringContainsString('php artisan list --format=json', (string) $json['command']);
 
     }
 

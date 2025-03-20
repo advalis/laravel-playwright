@@ -26,8 +26,8 @@ class Controller
 
         $input = new ArrayInput($parameters);
         $args = $input->__toString();
-        $artisanPath = base_path('artisan');
-        $finalCommand = "php $artisanPath $command $args";
+        $basePath = base_path();
+        $finalCommand = "cd $basePath && php artisan $command $args";
         exec($finalCommand, $output, $exitCode);
 
         $output = implode("\n", $output);
