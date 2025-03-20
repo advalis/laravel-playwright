@@ -23,7 +23,9 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     networks:
-        - laravel-playwright
+        laravel-playwright:
+          aliases:
+            - db
 
 networks:
     laravel-playwright:
