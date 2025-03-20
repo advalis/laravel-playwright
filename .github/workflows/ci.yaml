@@ -22,7 +22,9 @@ jobs:
       -   name: Docker compose
           env:
             PHP_VERSION: ${{ matrix.php }}
-          run: docker compose up -d --wait --build
+          run: |
+            docker compose up -d --wait --build
+            sleep 10
 
       -   name: Run tests
           run: docker compose exec app vendor/bin/phpunit
