@@ -31,7 +31,7 @@ jobs:
           run: docker compose up -d --build
 
       -   name: Run static analysis
-          run: docker compose exec app vendor/bin/phpunit
+          run: docker compose run app vendor/bin/phpunit
 
   static_analysis:
     name: Static analysis
@@ -45,7 +45,7 @@ jobs:
           run: docker build -t app .
 
       -   name: Run static analysis
-          run: docker exec app vendor/bin/phpstan analyse --memory-limit=1G
+          run: docker run app vendor/bin/phpstan analyse --memory-limit=1G
 
   playwright_test:
     name: "Playwright TypeScript"
