@@ -1,7 +1,17 @@
-# Use postgres/example user/password credentials
-version: '3.9'
-
 services:
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    tty: true
+    working_dir: /app
+    volumes:
+      - .:/app
+      - /app/vendor
+    networks:
+      - laravel-playwright
 
   db:
     image: postgres
@@ -12,3 +22,9 @@ services:
       POSTGRES_PASSWORD: postgres
     ports:
         - "8989:5432"
+    networks:
+        - laravel-playwright
+
+networks:
+    laravel-playwright:
+        driver: bridge
