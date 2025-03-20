@@ -17,21 +17,15 @@ jobs:
 
     steps:
       -   name: Checkout
-          uses: actions/checkout@v2
-
-      -   name: Setup PHP
-          uses: shivammathur/setup-php@v2
-          with:
-            coverage: "none"
-            php-version: "${{ matrix.php }}"
-            ini-file: development
-            tools: composer:v2
+          uses: actions/checkout@v4
 
       -   name: Docker compose
-          run: docker compose up -d --build
+          env:
+            PHP_VERSION: ${{ matrix.php }}
+          run: docker compose up -d --wait
 
       -   name: Run static analysis
-          run: docker compose run app vendor/bin/phpunit
+          run: docker run --network laravel-playwright app vendor/bin/phpunit
 
   static_analysis:
     name: Static analysis
