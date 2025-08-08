@@ -1,9 +1,9 @@
 <?php
 
-namespace Hyvor\LaravelPlaywright\Tests\Feature;
+namespace Advalis\LaravelPlaywright\Tests\Feature;
 
-use Hyvor\LaravelPlaywright\Services\DynamicConfig;
-use Hyvor\LaravelPlaywright\Tests\TestCase;
+use Advalis\LaravelPlaywright\Services\DynamicConfig;
+use Advalis\LaravelPlaywright\Tests\TestCase;
 
 class TeadDownTest extends TestCase
 {

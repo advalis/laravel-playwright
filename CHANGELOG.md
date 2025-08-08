@@ -1,6 +1,6 @@
 # 2.0.0
-- Renamed PHP package from `hyvor/laravel-e2e` to `hyvor/laravel-playwright`
-- Introduces a new NPM package `@hyvor/laravel-playwright` for the frontend
+- Renamed PHP package from `advalis/laravel-e2e` to `advalis/laravel-playwright`
+- Introduces a new NPM package `@advalis/laravel-playwright` for the frontend
 - Adds new methods for dynamic configuration
 
 # 1.0.0

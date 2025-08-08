@@ -1,6 +1,6 @@
 <?php
 
-namespace Hyvor\LaravelPlaywright\Tests\Helpers;
+namespace Advalis\LaravelPlaywright\Tests\Helpers;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

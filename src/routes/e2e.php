@@ -1,8 +1,8 @@
 <?php
 
-use Hyvor\LaravelPlaywright\Services\Config;
+use Advalis\LaravelPlaywright\Services\Config;
 use Illuminate\Support\Facades\Route;
-use Hyvor\LaravelPlaywright\Controller;
+use Advalis\LaravelPlaywright\Controller;
 
 
 Route::prefix(Config::prefix())->group(function () {

@@ -1,23 +1,23 @@
 {
-    "name": "hyvor/laravel-playwright",
+    "name": "advalis/laravel-playwright",
     "description": "Laravel and Playwright E2E Testing",
     "keywords": ["laravel", "playwright", "testing", "e2e"],
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Hyvor\\LaravelPlaywright\\": "src/"
+            "Advalis\\LaravelPlaywright\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Hyvor\\LaravelPlaywright\\Tests\\": "tests/"
+            "Advalis\\LaravelPlaywright\\Tests\\": "tests/"
         }
     },
     "authors": [
         {
-            "name": "Supun",
-            "email": "supun@hyvor.com"
+            "name": "William Whitmire",
+            "email": "william@fincenfetch.com"
         }
     ],
     "require": {
@@ -32,7 +32,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Hyvor\\LaravelPlaywright\\ServiceProvider"
+                "Advalis\\LaravelPlaywright\\ServiceProvider"
             ]
         }
     },

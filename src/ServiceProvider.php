@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace Hyvor\LaravelPlaywright;
+namespace Advalis\LaravelPlaywright;
 
-use Hyvor\LaravelPlaywright\Services\Config;
-use Hyvor\LaravelPlaywright\Services\DynamicConfig;
+use Advalis\LaravelPlaywright\Services\Config;
+use Advalis\LaravelPlaywright\Services\DynamicConfig;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 

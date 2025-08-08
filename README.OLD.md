@@ -9,7 +9,7 @@ This repository contains a Laravel library and a Typescript library to help you 
 You can install the Laravel package via composer:
 
 ```bash
-composer require --dev hyvor/laravel-playwright
+composer require --dev advalis/laravel-playwright
 ```
 
 ### Configuration
@@ -26,7 +26,7 @@ return [
         * Make sure to change `use.laravelBaseUrl` in playwright.config.ts if you change this
         */
         'prefix' => 'playwright',
-        
+
         /**
         * The environments in which the testing endpoints are enabled
         */
@@ -158,7 +158,7 @@ Arguments as an array:
 ```json
 {
     "function": "fullName",
-    "args": ["Supun", "Wimalasena"]
+    "args": ["William", "Whitmire"]
 }
 ```
 
@@ -170,8 +170,8 @@ Named arguments:
 {
     "function": "fullName",
     "args": {
-        "first": "Supun",
-        "last": "Wimalasena"
+        "first": "William",
+        "last": "Whitmire"
     }
 }
 ```

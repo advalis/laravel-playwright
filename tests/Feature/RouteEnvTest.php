@@ -1,9 +1,9 @@
 <?php
 
-namespace Hyvor\LaravelPlaywright\Tests\Feature;
+namespace Advalis\LaravelPlaywright\Tests\Feature;
 
-use Hyvor\LaravelPlaywright\ServiceProvider;
-use Hyvor\LaravelPlaywright\Tests\TestCase;
+use Advalis\LaravelPlaywright\ServiceProvider;
+use Advalis\LaravelPlaywright\Tests\TestCase;
 use Illuminate\Routing\RouteCollection;
 use Illuminate\Support\Facades\Route;
 

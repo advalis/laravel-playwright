@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace Hyvor\LaravelPlaywright;
+namespace Advalis\LaravelPlaywright;
 
 use Carbon\Carbon;
-use Hyvor\LaravelPlaywright\Services\DynamicConfig;
+use Advalis\LaravelPlaywright\Services\DynamicConfig;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\JsonResponse;

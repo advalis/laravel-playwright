@@ -1,5 +1,5 @@
 {
-  "name": "@hyvor/laravel-playwright",
+  "name": "@advalis/laravel-playwright",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

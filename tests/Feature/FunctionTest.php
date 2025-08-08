@@ -1,8 +1,8 @@
 <?php
 
-namespace Hyvor\LaravelPlaywright\Tests\Feature;
+namespace Advalis\LaravelPlaywright\Tests\Feature;
 
-use Hyvor\LaravelPlaywright\Tests\TestCase;
+use Advalis\LaravelPlaywright\Tests\TestCase;
 
 class FunctionTest extends TestCase
 {
@@ -26,10 +26,10 @@ class FunctionTest extends TestCase
     {
         $this->postJson('/playwright/function', [
             'function' => 'testFunction2',
-            'args' => ['Supun']
+            'args' => ['William']
         ])
             ->assertOk()
-            ->assertSee('Hello Supun');
+            ->assertSee('Hello William');
     }
 
     public function testCallsAFunctionWithNamedArgs() : void
@@ -38,11 +38,11 @@ class FunctionTest extends TestCase
             'function' => 'testFunction3',
             'args' => [
                 'age' => 24,
-                'name' => 'Supun'
+                'name' => 'William'
             ]
         ])
             ->assertOk()
-            ->assertSee('Hello Supun. You are 24');
+            ->assertSee('Hello William. You are 24');
     }
 
     public function testCallsAStaticMethod() : void
@@ -58,7 +58,7 @@ class FunctionTest extends TestCase
     public function testCallsAStaticMethodWithNamespace() : void
     {
         $this->postJson('/playwright/function', [
-            'function' => 'Hyvor\LaravelPlaywright\Tests\Helpers\TestableStaticMethod::ping',
+            'function' => 'Advalis\LaravelPlaywright\Tests\Helpers\TestableStaticMethod::ping',
         ])
             ->assertOk()
             ->assertSee('pong');

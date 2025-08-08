@@ -1,9 +1,9 @@
 <?php
 
-namespace Hyvor\LaravelPlaywright\Tests\Feature;
+namespace Advalis\LaravelPlaywright\Tests\Feature;
 
-use Hyvor\LaravelPlaywright\Tests\Helpers\UserModel;
-use Hyvor\LaravelPlaywright\Tests\TestCase;
+use Advalis\LaravelPlaywright\Tests\Helpers\UserModel;
+use Advalis\LaravelPlaywright\Tests\TestCase;
 
 class TruncateTest extends TestCase
 {

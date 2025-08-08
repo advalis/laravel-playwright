@@ -1,10 +1,10 @@
 <?php
 
-namespace Hyvor\LaravelPlaywright\Tests;
+namespace Advalis\LaravelPlaywright\Tests;
 
-use Hyvor\LaravelPlaywright\ServiceProvider;
-use Hyvor\LaravelPlaywright\Services\DynamicConfig;
-use Hyvor\LaravelPlaywright\Tests\Helpers\Migrations;
+use Advalis\LaravelPlaywright\ServiceProvider;
+use Advalis\LaravelPlaywright\Services\DynamicConfig;
+use Advalis\LaravelPlaywright\Tests\Helpers\Migrations;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {

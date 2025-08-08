@@ -1,6 +1,6 @@
 <?php
 
-namespace Hyvor\LaravelPlaywright\Services;
+namespace Advalis\LaravelPlaywright\Services;
 
 use Carbon\Carbon;
 

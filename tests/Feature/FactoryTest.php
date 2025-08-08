@@ -1,9 +1,9 @@
 <?php
 
-namespace Hyvor\LaravelPlaywright\Tests\Feature;
+namespace Advalis\LaravelPlaywright\Tests\Feature;
 
-use Hyvor\LaravelPlaywright\Tests\Helpers\UserModel;
-use Hyvor\LaravelPlaywright\Tests\TestCase;
+use Advalis\LaravelPlaywright\Tests\Helpers\UserModel;
+use Advalis\LaravelPlaywright\Tests\TestCase;
 
 class FactoryTest extends TestCase
 {
@@ -12,7 +12,7 @@ class FactoryTest extends TestCase
     {
 
         $this->postJson('playwright/factory', [
-            'model' => '\Hyvor\LaravelPlaywright\Tests\Helpers\UserModel',
+            'model' => '\Advalis\LaravelPlaywright\Tests\Helpers\UserModel',
             'attrs' => [
                 'name' => 'John Doe',
             ]
@@ -28,7 +28,7 @@ class FactoryTest extends TestCase
     {
 
         $this->postJson('playwright/factory', [
-            'model' => '\Hyvor\LaravelPlaywright\Tests\Helpers\UserModel',
+            'model' => '\Advalis\LaravelPlaywright\Tests\Helpers\UserModel',
             'count' => 3
         ])
             ->assertOk()

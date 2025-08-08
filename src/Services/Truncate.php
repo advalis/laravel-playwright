@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Hyvor\LaravelPlaywright\Services;
+namespace Advalis\LaravelPlaywright\Services;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;

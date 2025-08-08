@@ -1,8 +1,8 @@
 <?php
 
-namespace Hyvor\LaravelPlaywright\Tests\Feature;
+namespace Advalis\LaravelPlaywright\Tests\Feature;
 
-use Hyvor\LaravelPlaywright\Tests\TestCase;
+use Advalis\LaravelPlaywright\Tests\TestCase;
 
 class RegisterBootFunctionTest extends TestCase
 {
@@ -11,7 +11,7 @@ class RegisterBootFunctionTest extends TestCase
     {
 
         $this->postJson('/playwright/registerBootFunction', [
-            'function' => 'Hyvor\LaravelPlaywright\Tests\Feature\RegisterBootFunctionTest::setGlobalVariable',
+            'function' => 'Advalis\LaravelPlaywright\Tests\Feature\RegisterBootFunctionTest::setGlobalVariable',
         ])
             ->assertOk();
 
