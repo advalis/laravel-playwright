@@ -8,7 +8,9 @@ use Advalis\LaravelPlaywright\Testing\ReverbHelper;
 use Advalis\LaravelPlaywright\Testing\FinCENHelper;
 use Advalis\LaravelPlaywright\Services\Config;
 use Advalis\LaravelPlaywright\Services\DynamicConfig;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class LaravelPlaywrightServiceProvider extends BaseServiceProvider
