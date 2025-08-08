@@ -11,7 +11,7 @@ use Advalis\LaravelPlaywright\Services\DynamicConfig;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-class ServiceProvider extends BaseServiceProvider
+class LaravelPlaywrightServiceProvider extends BaseServiceProvider
 {
 
     public function boot() : void
@@ -25,6 +25,19 @@ class ServiceProvider extends BaseServiceProvider
             $dynamicConfig = app(DynamicConfig::class);
             $dynamicConfig->load();
         }
+
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../config/playwright.php' => config_path('playwright.php'),
+            ], 'playwright-config');
+        }
+
+        // Only load routes in testing/local environment
+        if ($this->app->environment(['local', 'testing'])) {
+            $this->loadRoutesFrom(__DIR__.'/routes/playwright.php');
+        }
+
+
 
         if ($this->app->environment(['local', 'testing'])) {
             Route::prefix('__playwright')->group(function () {
@@ -48,6 +61,8 @@ class ServiceProvider extends BaseServiceProvider
     public function register()
     {
         parent::register();
+
+        $this->mergeConfigFrom(__DIR__.'/../config/playwright.php', 'playwright');
 
         // Register custom helpers
         $this->app->singleton(OAuth2Helper::class);
