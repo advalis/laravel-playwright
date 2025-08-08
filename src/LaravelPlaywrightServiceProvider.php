@@ -16,8 +16,6 @@ class LaravelPlaywrightServiceProvider extends BaseServiceProvider
 
     public function boot() : void
     {
-        parent::boot();
-
         if (App::environment(...Config::envs())) {
             $this->loadRoutesFrom(__DIR__ . '/routes/e2e.php');
 
@@ -60,8 +58,6 @@ class LaravelPlaywrightServiceProvider extends BaseServiceProvider
 
     public function register()
     {
-        parent::register();
-
         $this->mergeConfigFrom(__DIR__.'/../config/playwright.php', 'playwright');
 
         // Register custom helpers
